@@ -1,3 +1,25 @@
+### Advantages of Distributed Version Control Systems
+
+Torvalds insisted on a distributed system because of the independence it affords to
+developers. With a distributed system, you can work on your copy of the code
+without having to worry about ongoing work on the same code by others. What
+makes it even better is that any distributed copy of the project can contain all the
+history of the project. A distributed system also lets you work offline, meaning you
+can make changes without having access to the server that stores the central repository.
+
+Another advantage of distributed systems is that you can sync your repositories
+among yourselves, bypassing the central location. Let’s say the access to the main
+server goes down and you have to collaborate with a colleague. You can share
+changes with your colleague and continue to work on the project together, and then
+later push all your changes to the location everyone has access to.
+
+In a centralized system, anyone who makes a change needs to be given access to
+the central location. In contrast, in a distributed system, new developers can make
+changes to their own repositories without being granted write access, while more
+experienced contributors can be given write access and the ability to review other
+contributions before merging them into the repository. Managing access is easier in
+distributed systems.
+
 ### Adding information to the User config file
 
 		git config --global user.name "alanr"
