@@ -216,3 +216,9 @@ To create a remote repository on Github
 		git push -u origin master
 
 When this is working properly there is some code added to **.gitconfig**.
+
+		[remote "origin"]
+			url = https://github.com/alanrob17/first_project.git
+			fetch = +refs/heads/*:refs/remotes/origin/*
+
+Test again.

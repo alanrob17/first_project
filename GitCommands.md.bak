@@ -90,7 +90,7 @@ Label in the present tense not the past tense. "Fixes a bug" not "fixed a bug".
 
 Use a text editor to create multiline messages for major changes. Try and make the line lengths to a maximum of 72 characters.
 
-#### Looking at the commit changes
+#### Commit History
 
 		git log
 		
@@ -206,4 +206,18 @@ e.g.
 or
 		
 		git diff GitCommands.md
+
+### Remote Repositories
+
+To create a remote repository on Github
+
+		git remote add origin https://github.com/alanrob17/first_project.git
+		
+		git push -u origin master
+
+When this is working properly there is some code added to **.gitconfig**.
+
+		[remote "origin"]
+			url = https://github.com/alanrob17/first_project.git
+			fetch = +refs/heads/*:refs/remotes/origin/*
 
