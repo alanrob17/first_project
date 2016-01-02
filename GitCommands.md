@@ -215,4 +215,4 @@ To create a remote repository on Github
 		
 		git push -u origin master
 
-		
+When this is working properly there is some code added to **.gitconfig**.
