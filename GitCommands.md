@@ -40,8 +40,6 @@ or a particualr setting
 git config user.name
 
 
-
-
 ### Help
 
 	git help
@@ -182,9 +180,20 @@ Can use grep
 			
 Will search for the string "Init"	
 
+### Get the status of you files
 
+        git status
+        
+This command will tell you if you have any changes that haven't been committed.
 
+e.g.
 
-
-
+		$ git status
+		On branch master
+		Changes not staged for commit:
+		(use "git add <file>..." to update what will be committed)
+		(use "git checkout -- <file>..." to discard changes in working directory)
 		
+				modified:   GitCommands.md
+		
+		no changes added to commit (use "git add" and/or "git commit -a")		
