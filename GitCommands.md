@@ -70,3 +70,94 @@ Label in the present tense not the past tense. "Fixes a bug" not "fixed a bug".
 
 Use a text editor to create multiline messages for major changes. Try and make the line lengths to a maximum of 72 characters.
 
+#### Looking at the commit changes
+
+		git log
+		
+#### Results
+
+		alanr@LION ~/documents/first_project (master)
+		$ git log
+		commit e4b4226421a73ff1c5bbd48a29f12d089c8b556d
+		Author: alanr <alan@robsonmail.com>
+		Date:   Sat Jan 2 13:10:57 2016 +1100
+		
+			more information added to the file.
+		
+		commit 38498c8e0fd2f7484f96e337a43b4624637a4fe0
+		Author: alanr <alan@robsonmail.com>
+		Date:   Sat Jan 2 13:00:47 2016 +1100
+		
+			Initial commit		
+
+Limit the number of commits from the log.
+
+		$ git log -n1
+		commit e4b4226421a73ff1c5bbd48a29f12d089c8b556d
+		Author: alanr <alan@robsonmail.com>
+		Date:   Sat Jan 2 13:10:57 2016 +1100
+		
+			more information added to the file.			
+			
+Will just bring back the latest.
+
+
+Can search for a date
+
+		$ git log --since=2016-01-1
+		commit e4b4226421a73ff1c5bbd48a29f12d089c8b556d
+		Author: alanr <alan@robsonmail.com>
+		Date:   Sat Jan 2 13:10:57 2016 +1100
+		
+			more information added to the file.
+		
+		commit 38498c8e0fd2f7484f96e337a43b4624637a4fe0
+		Author: alanr <alan@robsonmail.com>
+		Date:   Sat Jan 2 13:00:47 2016 +1100
+		
+			Initial commit
+
+
+Everything until the 2nd of January
+
+		$ git log --until=2016-01-02
+		commit e4b4226421a73ff1c5bbd48a29f12d089c8b556d
+		Author: alanr <alan@robsonmail.com>
+		Date:   Sat Jan 2 13:10:57 2016 +1100
+		
+			more information added to the file.
+		
+		commit 38498c8e0fd2f7484f96e337a43b4624637a4fe0
+		Author: alanr <alan@robsonmail.com>
+		Date:   Sat Jan 2 13:00:47 2016 +1100
+		
+			Initial commit
+
+Search for an author. You can use quotes or leave them out. Can search for a part name
+
+		$ git log --author=alanr
+		commit e4b4226421a73ff1c5bbd48a29f12d089c8b556d
+		Author: alanr <alan@robsonmail.com>
+		Date:   Sat Jan 2 13:10:57 2016 +1100
+		
+			more information added to the file.
+		
+		commit 38498c8e0fd2f7484f96e337a43b4624637a4fe0
+		Author: alanr <alan@robsonmail.com>
+		Date:   Sat Jan 2 13:00:47 2016 +1100
+		
+			Initial commit
+			
+			
+Can use grep
+
+		$ git log --grep="Init"
+		commit 38498c8e0fd2f7484f96e337a43b4624637a4fe0
+		Author: alanr <alan@robsonmail.com>
+		Date:   Sat Jan 2 13:00:47 2016 +1100
+		
+			Initial commit
+			
+Will search for the string "Init"	
+
+		
