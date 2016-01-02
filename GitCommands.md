@@ -90,7 +90,7 @@ Label in the present tense not the past tense. "Fixes a bug" not "fixed a bug".
 
 Use a text editor to create multiline messages for major changes. Try and make the line lengths to a maximum of 72 characters.
 
-#### Looking at the commit changes
+#### Commit History
 
 		git log
 		
@@ -196,4 +196,14 @@ e.g.
 		
 				modified:   GitCommands.md
 		
-		no changes added to commit (use "git add" and/or "git commit -a")		
+		no changes added to commit (use "git add" and/or "git commit -a")
+		
+### Differences in files
+
+
+		git diff
+
+or
+		
+		git diff GitCommands.md
+
