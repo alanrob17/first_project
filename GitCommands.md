@@ -207,3 +207,10 @@ or
 		
 		git diff GitCommands.md
 
+### Remote Repositories
+
+To create a remote repository on Github
+
+		git remote add origin https://github.com/alanrob17/first_project.git
+		
+		git push -u origin master
