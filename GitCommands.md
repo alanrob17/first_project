@@ -35,7 +35,7 @@ Take me to my home directory
 
 git config --list
 
-or a particualr setting
+or a particular setting
 
 git config user.name
 
@@ -220,5 +220,3 @@ When this is working properly there is some code added to **.gitconfig**.
 		[remote "origin"]
 			url = https://github.com/alanrob17/first_project.git
 			fetch = +refs/heads/*:refs/remotes/origin/*
-
-Test again.
