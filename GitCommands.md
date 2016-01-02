@@ -216,4 +216,3 @@ To create a remote repository on Github
 		git push -u origin master
 
 		
-Add some more text here.		
