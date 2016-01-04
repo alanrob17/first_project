@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>Git Commands</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/starter-template.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Git Commands</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li class="active"><a href="#">Notes</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="starter-template"></p>
+<h3><a id="Advantages_of_Distributed_Version_Control_Systems_0"></a>Advantages of Distributed Version Control Systems</h3>
+<p>Torvalds insisted on a distributed system because of the independence it affords to
+developers. With a distributed system, you can work on your copy of the code
+without having to worry about ongoing work on the same code by others. What
+makes it even better is that any distributed copy of the project can contain all the
+history of the project. A distributed system also lets you work offline, meaning you
+can make changes without having access to the server that stores the central repository.</p>
+<p>Another advantage of distributed systems is that you can sync your repositories
+among yourselves, bypassing the central location. Let’s say the access to the main
+server goes down and you have to collaborate with a colleague. You can share
+changes with your colleague and continue to work on the project together, and then
+later push all your changes to the location everyone has access to.</p>
+<p>In a centralized system, anyone who makes a change needs to be given access to
+the central location. In contrast, in a distributed system, new developers can make
+changes to their own repositories without being granted write access, while more
+experienced contributors can be given write access and the ability to review other
+contributions before merging them into the repository. Managing access is easier in
+distributed systems.</p>
+<h3><a id="Adding_information_to_the_User_config_file_22"></a>Adding information to the User config file</h3>
+<pre><code>    git config --global user.name &quot;alanr&quot;
+    git config --global user.email &quot;alan@robsonmail.com&quot;
+</code></pre>
+<p>Take me to my home directory</p>
+<pre><code>    cd ~
+</code></pre>
+<p>(c:\users\alan)</p>
+<h3><a id="To_list_the_folder_congfig_33"></a>To list the folder .congfig</h3>
+<p>git config --list</p>
+<p>or a particular setting</p>
+<p>git config <a href="http://user.name">user.name</a></p>
+<h3><a id="Help_42"></a>Help</h3>
+<pre><code>git help
+
+git help log
+</code></pre>
+<h3><a id="Create_a_new_project_repository_48"></a>Create a new project repository</h3>
+<pre><code>    $ cd ~
+    $ cd documents
+    $ mkdir first_project
+    $ cd first_project
+    $ git init
+</code></pre>
+<h4><a id="Results_56"></a>Results</h4>
+<pre><code>    alanr@LION ~/documents/first_project
+    $ git init
+    Initialized empty Git repository in c:/Users/alanr/documents/first_project/.git/
+</code></pre>
+<p>The storing and tracking information is stored in the <strong>.git</strong> folder.</p>
+<h3><a id="To_create_a_first_commit_64"></a>To create a first commit</h3>
+<pre><code>    git add .
+    git commit -m &quot;Initial commit&quot;
+</code></pre>
+<h4><a id="Results_69"></a>Results</h4>
+<pre><code>    alanr@LION ~/documents/first_project (master)
+    $ git commit -m &quot;Initial commit&quot;
+    [master (root-commit) 38498c8] Initial commit
+    2 files changed, 86 insertions(+)
+    create mode 100644 GitCommands.md
+    create mode 100644 GitCommands.md.bak       
+</code></pre>
+<p>The process we are going to use for our work will be,</p>
+<blockquote>
+<p>make changes
+add the changes
+commit changes to the repository with a message</p>
+</blockquote>
+<h3><a id="Writing_commit_messages_84"></a>Writing commit messages</h3>
+<p>Our first message was too simple. We need to write more descriptive messages. In the first case we should have said that we had created a file named …</p>
+<p>Label in the present tense not the past tense. “Fixes a bug” not “fixed a bug”.</p>
+<p>Use a text editor to create multiline messages for major changes. Try and make the line lengths to a maximum of 72 characters.</p>
+<h4><a id="Commit_History_92"></a>Commit History</h4>
+<pre><code>    git log
+</code></pre>
+<h4><a id="Results_96"></a>Results</h4>
+<pre><code>    alanr@LION ~/documents/first_project (master)
+    $ git log
+    commit e4b4226421a73ff1c5bbd48a29f12d089c8b556d
+    Author: alanr &lt;alan@robsonmail.com&gt;
+    Date:   Sat Jan 2 13:10:57 2016 +1100
+    
+        more information added to the file.
+    
+    commit 38498c8e0fd2f7484f96e337a43b4624637a4fe0
+    Author: alanr &lt;alan@robsonmail.com&gt;
+    Date:   Sat Jan 2 13:00:47 2016 +1100
+    
+        Initial commit      
+</code></pre>
+<p>Limit the number of commits from the log.</p>
+<pre><code>    $ git log -n1
+    commit e4b4226421a73ff1c5bbd48a29f12d089c8b556d
+    Author: alanr &lt;alan@robsonmail.com&gt;
+    Date:   Sat Jan 2 13:10:57 2016 +1100
+    
+        more information added to the file.         
+</code></pre>
+<p>Will just bring back the latest.</p>
+<p>Can search for a date</p>
+<pre><code>    $ git log --since=2016-01-1
+    commit e4b4226421a73ff1c5bbd48a29f12d089c8b556d
+    Author: alanr &lt;alan@robsonmail.com&gt;
+    Date:   Sat Jan 2 13:10:57 2016 +1100
+    
+        more information added to the file.
+    
+    commit 38498c8e0fd2f7484f96e337a43b4624637a4fe0
+    Author: alanr &lt;alan@robsonmail.com&gt;
+    Date:   Sat Jan 2 13:00:47 2016 +1100
+    
+        Initial commit
+</code></pre>
+<p>Everything until the 2nd of January</p>
+<pre><code>    $ git log --until=2016-01-02
+    commit e4b4226421a73ff1c5bbd48a29f12d089c8b556d
+    Author: alanr &lt;alan@robsonmail.com&gt;
+    Date:   Sat Jan 2 13:10:57 2016 +1100
+    
+        more information added to the file.
+    
+    commit 38498c8e0fd2f7484f96e337a43b4624637a4fe0
+    Author: alanr &lt;alan@robsonmail.com&gt;
+    Date:   Sat Jan 2 13:00:47 2016 +1100
+    
+        Initial commit
+</code></pre>
+<p>Search for an author. You can use quotes or leave them out. Can search for a part name</p>
+<pre><code>    $ git log --author=alanr
+    commit e4b4226421a73ff1c5bbd48a29f12d089c8b556d
+    Author: alanr &lt;alan@robsonmail.com&gt;
+    Date:   Sat Jan 2 13:10:57 2016 +1100
+    
+        more information added to the file.
+    
+    commit 38498c8e0fd2f7484f96e337a43b4624637a4fe0
+    Author: alanr &lt;alan@robsonmail.com&gt;
+    Date:   Sat Jan 2 13:00:47 2016 +1100
+    
+        Initial commit
+</code></pre>
+<p>Can use grep</p>
+<pre><code>    $ git log --grep=&quot;Init&quot;
+    commit 38498c8e0fd2f7484f96e337a43b4624637a4fe0
+    Author: alanr &lt;alan@robsonmail.com&gt;
+    Date:   Sat Jan 2 13:00:47 2016 +1100
+    
+        Initial commit
+</code></pre>
+<p>Will search for the string “Init”</p>
+<h3><a id="Get_the_status_of_you_files_182"></a>Get the status of you files</h3>
+<pre><code>    git status
+</code></pre>
+<p>This command will tell you if you have any changes that haven’t been committed.</p>
+<p>e.g.</p>
+<pre><code>    $ git status
+    On branch master
+    Changes not staged for commit:
+    (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+    (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+    
+            modified:   GitCommands.md
+    
+    no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre>
+<h3><a id="Differences_in_files_200"></a>Differences in files</h3>
+<pre><code>    git diff
+</code></pre>
+<p>or</p>
+<pre><code>    git diff GitCommands.md
+</code></pre>
+<h3><a id="Remote_Repositories_209"></a>Remote Repositories</h3>
+<p>To create a remote repository on Github</p>
+<pre><code>    git remote add origin https://github.com/alanrob17/first_project.git
+    
+    git push -u origin master
+</code></pre>
+<p>When this is working properly there is some code added to <strong>.gitconfig</strong>.</p>
+<pre><code>    [remote &quot;origin&quot;]
+        url = https://github.com/alanrob17/first_project.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+</code></pre>
+
+  
+</div>
+</div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery-2.0.3.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
